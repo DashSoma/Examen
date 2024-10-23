@@ -26,4 +26,9 @@ public class GestorMantenimiento {
         return lista;
     }
    
+    
+    public void real(){
+    
+    
+    }
 }

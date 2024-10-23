@@ -41,7 +41,7 @@ public class Vehiculo {
         return "Vehiculo{" + "marca=" + marca + ", modelo=" + modelo + ", matricula=" + matricula + '}';
     }
     
-    
+    public void agregar(){}
     
     
 }
