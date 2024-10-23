@@ -10,7 +10,9 @@ import java.util.ArrayList;
  *
  * @author Student
  */
-public class VehiculoList {
+public class VehiculoList extends Thread {
+    
+    
 
     private ArrayList<Vehiculo> lista;
 
@@ -18,6 +20,9 @@ public class VehiculoList {
         this.lista = new ArrayList<>();
     }
 
+    public void run(){
+        insertar(0,"",0);
+    }
     public VehiculoList() {
     }
 
