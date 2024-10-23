@@ -9,5 +9,39 @@ package Modelo;
  * @author Student
  */
 public class Vehiculo {
+    private String marca;
+    private String modelo;
+    private double matricula;
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public double getMatricula() {
+        return matricula;
+    }
+
+    public Vehiculo(String marca, String modelo, double matricula) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.matricula = matricula;
+    }
+
+    public Vehiculo() {
+        this("","",0.0);
+       
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" + "marca=" + marca + ", modelo=" + modelo + ", matricula=" + matricula + '}';
+    }
+    
+    
+    
     
 }
