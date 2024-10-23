@@ -5,30 +5,38 @@
 package Controlador;
 
 import Modelo.Vehiculo;
-import java.util.ArrayList;
+import Modelo.VehiculoList;
+import Vistas.Vista;
 
 /**
  *
  * @author Student
  */
 public class GestorMantenimiento {
-    private ArrayList <Vehiculo> lista;
-
-    public GestorMantenimiento(ArrayList<Vehiculo> lista) {
-        this.lista = new ArrayList<>();
+    Vehiculo vehiculo;
+    VehiculoList listaV;
+    Vista vista;
+    
+    public GestorMantenimiento(VehiculoList listaV, Vista vista) {
+        this.listaV = listaV;
+        this.vista = vista;
+    }    
+    
+    public void insertar() {
+        if (listaV == null) {
+            vista.mostrarMensaje("La lista está vacía", "Informacion");
+        }
+        int id = vista.getTxtCedula();
+        String nombre = vista.getTxtNombre();
+        int telefono = vista.getTxtTelefono();
+        
+        listaV.insertar(id, nombre, telefono);
     }
     
-    public void agregar (Vehiculo vehiculo){
-        lista.add(vehiculo);
-    }
-
-    public ArrayList<Vehiculo> Lista() {
-        return lista;
-    }
-   
-    
-    public void real(){
-    
-    
+    public void eliminar() {
+        if (listaV == null) {
+            vista.mostrarMensaje("La lista está vacía", "No puedes eliminar");
+        }
+        this.listaV.eliminar(vehiculo);
     }
 }

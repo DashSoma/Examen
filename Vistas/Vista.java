@@ -4,6 +4,9 @@
  */
 package Vistas;
 
+import Controlador.GestorMantenimiento;
+import Modelo.VehiculoList;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -11,12 +14,16 @@ import javax.swing.JTextField;
  * @author Student
  */
 public class Vista extends javax.swing.JFrame {
+     VehiculoList listaV;
+     GestorMantenimiento controller;
 
     /**
      * Creates new form Vista
      */
     public Vista() {
         initComponents();
+        listaV = new VehiculoList();
+        controller = new GestorMantenimiento(listaV, this);
     }
 
     /**
@@ -225,7 +232,8 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_txtModeloActionPerformed
 
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
-        // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_btnInsertarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -240,8 +248,8 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
-    public JTextField getTxtCedula() {
-        return txtCedula;
+    public int getTxtCedula() {
+        return Integer.parseInt(txtCedula.getText());
     }
 
     public JTextField getTxtMarca() {
@@ -256,16 +264,18 @@ public class Vista extends javax.swing.JFrame {
         return txtModelo;
     }
 
-    public JTextField getTxtNombre() {
-        return txtNombre;
+    public String getTxtNombre() {
+        return txtNombre.getText();
     }
 
-    public JTextField getTxtTelefono() {
-        return txtTelefono;
+    public int getTxtTelefono() {
+        return Integer.parseInt(txtTelefono.getText());
     }
 
-    
-    
+    public void mostrarMensaje(String mensaje, String titulo) {
+        JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
+    }
+
     /**
      * @param args the command line arguments
      */

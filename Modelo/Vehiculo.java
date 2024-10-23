@@ -9,9 +9,10 @@ package Modelo;
  * @author Student
  */
 public class Vehiculo {
+    private double matricula;
     private String marca;
     private String modelo;
-    private double matricula;
+    
 
     public String getMarca() {
         return marca;
