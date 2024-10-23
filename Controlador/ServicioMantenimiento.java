@@ -10,7 +10,7 @@ import Modelo.Vehiculo;
  *
  * @author Student
  */
-public class ServicioMantenimiento {
+public class ServicioMantenimiento{
     private Vehiculo reparacion;
     private String cambioAceite;
 
@@ -44,7 +44,5 @@ public class ServicioMantenimiento {
     public static void Actualizar() {
     
 }
-    
-  
-    
+
 }
