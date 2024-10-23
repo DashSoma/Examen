@@ -11,7 +11,7 @@ package Patrones;
 public class Singleton {
 
     private static Singleton instancia;
-
+    
     //Aquí irán las listas.
     public Singleton() {
         //this. = new HashSet;
